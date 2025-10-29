@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal</title>
+    <link rel="stylesheet" href="portal.css">
+</head>
+<body>
+    <header>
+        <div class="header-branding">
+            <img src="logo.png" alt="Sathyabama Logo">
+            <div>
+                <h2>Sathyabama Institute of Science and Technology</h2>
+                <h1>Student Portal</h1>
+            </div>
+        </div>
+        <button id="logout-btn">Logout</button>
+    </header>
+
+    <main class="container">
+        <nav class="tabs">
+            <button class="tab-link active" data-tab="library">Library</button>
+            <button class="tab-link" data-tab="canteen">Canteen</button>
+            <button class="tab-link" data-tab="events">Events</button>
+        </nav>
+
+        <section id="library" class="tab-content active">
+            <h2>📚 Library Book Reservation</h2>
+            <p>Click on a book to reserve it.</p>
+            <div id="book-list" class="item-list">
+            </div>
+        </section>
+
+        <section id="canteen" class="tab-content">
+            <h2>🍔 Canteen Menu & Billing</h2>
+            <p>Click "Add" on an item to add it to your bill.</p>
+            
+            <div class="canteen-layout">
+                <div id="canteen-list" class="item-list">
+                </div>
+
+                <div class="bill-container">
+                    <h3>Your Bill</h3>
+                    <div id="bill-list">
+                        <p class="empty-bill">Your bill is empty.</p>
+                    </div>
+                    <div id="total-container">
+                        <strong>Total:</strong>
+                        <span id="total-amount">₹0.00</span>
+                    </div>
+                    <button id="pay-btn">Pay Now</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="events" class="tab-content">
+            <h2>📣 College Events</h2>
+            <div id="event-list" class="item-list">
+            </div>
+        </section>
+    </main>
+
+    <script src="portal.js"></script>
+</body>
+</html>
